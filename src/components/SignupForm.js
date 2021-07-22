@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React ,{useEffect, useState} from 'react';
 import validation from './validation';
 
 const SignupForm =({submitForm}) =>{
@@ -9,7 +9,7 @@ const [values, setValues]= useState({
 });
 
 const [errors, setErrors] = useState({});
-
+const [dataIsCorrect, setDataIsCorrect] = useState();
 const handleChange =(event) =>{
   setValues({
     ...values,
@@ -20,9 +20,16 @@ const handleChange =(event) =>{
  const handleFormSubmit=(event)=>{
   event.preventDefault();
   setErrors(validation(values));
+  setDataIsCorrect(true);
  }
 
+ useEffect(() =>{
+   if(Object.keys(errors).length === 0 && dataIsCorrect){
+     submitForm(true);
+   }
+ }
 
+ )
     return(
         <div className="container">       
           <div className="app-wrapper">
