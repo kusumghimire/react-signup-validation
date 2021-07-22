@@ -1,9 +1,10 @@
-import React from 'react';
 
-const validate =() =>{
+
+const validation =(values) =>{
     return(
         <>
         </>
     )
 }
 
+export default validation;
