@@ -1,35 +1,11 @@
 import React ,{useEffect, useState} from 'react';
-import validation from './validation';
+
+import useForm from "./useForm";
+
 
 const SignupForm =({submitForm}) =>{
-const [values, setValues]= useState({
-  fullName:'',
-  email:'',
-  password:'',
-});
 
-const [errors, setErrors] = useState({});
-const [dataIsCorrect, setDataIsCorrect] = useState();
-const handleChange =(event) =>{
-  setValues({
-    ...values,
-    [event.target.name]: event.target.value,  //  Assign value to the respective field  
-  })
-}
-
- const handleFormSubmit=(event)=>{
-  event.preventDefault();
-  setErrors(validation(values));
-  setDataIsCorrect(true);
- }
-
- useEffect(() =>{
-   if(Object.keys(errors).length === 0 && dataIsCorrect){
-     submitForm(true);
-   }
- }
-
- )
+const {handleChange, handleFormSubmit, values,errors } = useForm(submitForm);
     return(
         <div className="container">       
           <div className="app-wrapper">
