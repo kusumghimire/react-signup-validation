@@ -1,5 +1,5 @@
 import React ,{useState} from 'react';
-
+import validation from './validation';
 const SignupForm =() =>{
 
 const [values, setValues]= useState({
@@ -35,19 +35,22 @@ const [errors, setErrors] = useState({});
                  <label className='label'>
                    Full Name
                  </label>
-                 <input className='input' type='text' value={values.fullName} onClick={handleChange}/>
+                 <input className='input' type='text' name="fullname" value={values.fullName} onClick={handleChange}/>
+                 {errors.fullname && <p className='error'>{errors.fullname}</p>}
                </div>
                <div className='email'>
                  <label className='label'>
                   Email
                  </label>
-                 <input className='input' type='email' value={values.email} onClick={handleChange} />
+                 <input className='input' type='email' name='email'  value={values.email} onClick={handleChange} />
+                 {errors.email && <p className='error'>{errors.email}</p>}
                </div>
                <div className='password'>
                  <label className='label'>
                  Password
                  </label>
                  <input className='input' type='password ' name='password' value={values.password} onClick={handleChange} />
+                 {errors.password && <p className='error'>{errors.password}</p>}
                </div>
 
                <div>
