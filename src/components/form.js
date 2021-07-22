@@ -1,9 +1,10 @@
 import React from 'react';
 
+import SignUpForm from './SignupForm'
 const Form = ()=>{
     return(
         <>
-        Form is here
+        <SignUpForm></SignUpForm>
         </>
     )
 }
