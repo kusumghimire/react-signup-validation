@@ -14,7 +14,7 @@ const [values, setValues]= useState({
  const handleChange =(event) =>{
    setValues({
      ...values,
-     [event.target.name]: event.target.value,
+     [event.target.name]: event.target.value,  //  Assign value to the respective field  
    })
  }
 
@@ -38,13 +38,13 @@ const [values, setValues]= useState({
                  <label className='label'>
                   Email
                  </label>
-                 <input className='input' type='email' value={values.email} />
+                 <input className='input' type='email' value={values.email} onClick={handleChange} />
                </div>
                <div className='password'>
                  <label className='label'>
                  Password
                  </label>
-                 <input className='input' type='password' value={values.password} />
+                 <input className='input' type='password ' name='password' value={values.password} onClick={handleChange} />
                </div>
 
                <div>
