@@ -1,6 +1,17 @@
-import React from 'react';
+import React ,{useState} from 'react';
 
 const SignupForm =() =>{
+
+const [values, setValues]= useState({
+  fullName:'',
+  email:'',
+  password:'',
+})
+
+
+ const handleFormSubmit=(event)=>{
+  event.preventDefault();
+ }
     return(
         <div className="container">       
           <div className="app-wrapper">
@@ -17,17 +28,23 @@ const SignupForm =() =>{
                  </label>
                  <input className='input' type='text' />
                </div>
-               <div className='name'>
+               <div className='email'>
                  <label className='label'>
                   Email
                  </label>
                  <input className='input' type='email' />
                </div>
-               <div className='name'>
+               <div className='password'>
                  <label className='label'>
                  Password
                  </label>
                  <input className='input' type='password' />
+               </div>
+
+               <div>
+                 <button className="submit" onClick={handleFormSubmit}>
+                   Sign Up 
+                 </button>
                </div>
 
              </form>
