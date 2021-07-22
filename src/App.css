@@ -48,3 +48,36 @@
   border-bottom-style: 2px solid black;
   margin-bottom: 10px;
 }
+
+.error{
+  color: red;
+}
+
+.submit{
+  display: flex;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 25px;
+  color: #fff;
+  padding: 10px 60px;
+  background: linear-gradient(to right #554679, #449468);
+  box-shadow: rgba(0,0,0,0.3)0px 10px 38px,
+              rgba(0,0,0,0.22)0px 15px 12px;
+  margin: auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+button:active{
+  transform: translateY(2px);
+}
+
+.form-success{
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+  min-width: 370px;
+  color: #c5bb35;
+}
