@@ -4,7 +4,7 @@ import SignUpForm from './SignupForm'
 const Form = ()=>{
     return(
         <>
-        <SignUpForm></SignUpForm>
+        <SignUpForm />
         </>
     )
 }
