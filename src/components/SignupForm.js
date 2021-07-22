@@ -10,16 +10,18 @@ const [values, setValues]= useState({
 
 const [errors, setErrors] = useState({});
 
+const handleChange =(event) =>{
+  setValues({
+    ...values,
+    [event.target.name]: event.target.value,  //  Assign value to the respective field  
+  })
+}
 
  const handleFormSubmit=(event)=>{
   event.preventDefault();
+  setErrors(validation(values));
  }
- const handleChange =(event) =>{
-   setValues({
-     ...values,
-     [event.target.name]: event.target.value,  //  Assign value to the respective field  
-   })
- }
+
 
     return(
         <div className="container">       
