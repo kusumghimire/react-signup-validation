@@ -61,6 +61,7 @@
   color: #000;
   padding: 10px 60px;
   background: linear-gradient(to right #554679, #449468);
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
   box-shadow: rgba(0,0,0,0.3)0px 10px 12px,
               rgba(0,0,0,0.22)0px 15px 12px;
   margin: auto;
@@ -68,6 +69,12 @@
   border: none;
   cursor: pointer;
   transition: all 0.1s;
+}
+.submit:hover{ 
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+
 }
 
 button:active{
@@ -81,3 +88,24 @@ button:active{
   min-width: 370px;
   color: #c5bb35;
 }
+
+
+.btn-grad 
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
