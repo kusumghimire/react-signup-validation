@@ -1,5 +1,4 @@
 
-
 const validation =(values) =>{
     let errors ={};
 
@@ -13,7 +12,7 @@ const validation =(values) =>{
     }
     if(!values.password){
         errors.password="Password is required."
-    }else if(values.password.length <5){
+    }else if(values.password.length <6){
        errors.password = "Password must be more than five characters.";
     }
  return errors;   

@@ -2,7 +2,6 @@ import React ,{useEffect,useState} from "react";
 import validation from './validation';
 
 const useForm = (submitForm) =>{
-
 const [values, setValues]= useState({
     fullname:" ",
     email:" ",
@@ -10,7 +9,7 @@ const [values, setValues]= useState({
   });
   
   const [errors, setErrors] = useState({});
-  const [dataIsCorrect, setDataIsCorrect] = useState();
+  const [dataIsCorrect, setDataIsCorrect] = useState(false);
 
   const handleChange = (event) =>{
     setValues({
