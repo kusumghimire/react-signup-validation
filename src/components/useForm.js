@@ -4,14 +4,15 @@ import validation from './validation';
 const useForm = (submitForm) =>{
 
 const [values, setValues]= useState({
-    fullName:'',
-    email:'',
-    password:'',
+    fullname:" ",
+    email:" ",
+    password:" ",
   });
   
   const [errors, setErrors] = useState({});
   const [dataIsCorrect, setDataIsCorrect] = useState();
-  const handleChange =(event) =>{
+
+  const handleChange = (event) =>{
     setValues({
       ...values,
       [event.target.name]: event.target.value,  //  Assign value to the respective field  

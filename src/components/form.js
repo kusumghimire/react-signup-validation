@@ -9,7 +9,7 @@ const submitForm = ()  =>  {
 };
     return(
         <>
-        {!formIsSubmitted ? <SignupFormSuccess submitForm={submitForm} /> : <SignupForm/> }   
+        {!formIsSubmitted ? <SignupForm submitForm={submitForm} /> : <SignupFormSuccess/> }   
         </>
     )
 }
